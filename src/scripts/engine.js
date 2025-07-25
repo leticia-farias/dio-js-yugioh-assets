@@ -135,7 +135,7 @@ async function hiddenCardDetails() {
 
 async function drawButton(text) {
     state.actions.button.innerText = text;
-    state.actions.button.style.display = "block";
+    state.actions.button.style.visibility = "visible";
 };
 
 async function updateScore() {
@@ -173,7 +173,7 @@ async function removeAllCardsImages() {
 async function drawSelectCard(index) {
     state.cardSprites.avatar.src = cardData[index].img;
     state.cardSprites.name.innerText = cardData[index].name;
-    state.cardSprites.type.innerText = "Attibute : " + cardData[index].type;
+    state.cardSprites.type.innerText = cardData[index].type;
 };
 
 async function drawCards(cardNumbers, fieldSide) {
@@ -187,7 +187,7 @@ async function drawCards(cardNumbers, fieldSide) {
 
 async function resetDuel() {
     state.cardSprites.avatar.src = "";
-    state.actions.button.style.display = "none";
+    state.actions.button.style.visibility = "hidden";
 
     state.fieldCards.player.style.display = "none";
     state.fieldCards.computer.style.display = "none";
